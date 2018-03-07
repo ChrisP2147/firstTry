@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>DOM-Schnittstellen</title>
+</head>
+<body>
+  <article id="lead">
+    <h1>Die DOM-Schnittstelle</h1>
+    <p>Erster Absatztext im Artikel</p>
+    <p>Zweiter Absatztext im Artikel</p>
+  </article>
+  <p>Erster Absatztext außerhalb des Artikels</p>
+  <p>Zweiter Absatztext außerhalb des Artikels</p>
+
+  <p id="result"></p>
+
+  <script>
+
+    var p_elements = document.getElementsByTagName("p");
+    var text = "Insgesamt sind " + p_elements.length + " p-Elemente im Dokument";
+
+    var article_elements = document.getElementById("lead");
+    if(article_elements) {
+      var art_p_elements = article_elements.getElementsByTagName("p");
+      text += " und " + art_p_elements.length + " im article-Element enthalten!";
+    }
+    else {
+      text += " enthalten!";
+    }
+
+    text += " Der zweite Absatz im Artikel lautet: " + art_p_elements[1].innerHTML;
+
+    document.getElementById("result").innerHTML = text;
+  </script>
+
+</body>
+</html>
