@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.fling-minislide {width: 100%; height: 123px; overflow:hidden; position:relative; }
+.fling-minislide img{ position:absolute; animation:fling-minislide 40s infinite; opacity:0; width: 100%; height: 123px;}
+
+@keyframes fling-minislide {25%{opacity:1;} 40%{opacity:0;}} 
+.fling-minislide img:nth-child(4){animation-delay:0s;}
+.fling-minislide img:nth-child(3){animation-delay:10s;}
+.fling-minislide img:nth-child(2){animation-delay:20s;}
+.fling-minislide img:nth-child(1){animation-delay:30s;}
+
+@media screen and (min-width: 1200px) and ( max-width: 1400px )
+{
+.fling-minislide {width: 100%; height: 150px; overflow:hidden; position:relative; }
+.fling-minislide img{ position:absolute; animation:fling-minislide 40s infinite; opacity:0; width: 100%; height: 150px;}
+}
+
+@media screen and (min-width: 1000px) and ( max-width: 1199px )
+{
+.fling-minislide {width: 100%; height: 130px; overflow:hidden; position:relative; }
+.fling-minislide img{ position:absolute; animation:fling-minislide 40s infinite; opacity:0; width: 100%; height: 130px;}
+}
+
+@media screen and (min-width: 800px) and ( max-width: 999px )
+{
+.fling-minislide {width: 100%; height: 120px; overflow:hidden; position:relative; }
+.fling-minislide img{ position:absolute; animation:fling-minislide 40s infinite; opacity:0; width: 100%; height: 120px;}
+}
+
+@media screen and (min-width: 700px) and ( max-width: 799px )
+{
+.fling-minislide {width: 100%; height: 100px; overflow:hidden; position:relative; }
+.fling-minislide img{ position:absolute; animation:fling-minislide 40s infinite; opacity:0; width: 100%; height: 100px;}
+}
+
+@media screen and (min-width: 500px) and ( max-width: 699px )
+{
+.fling-minislide {width: 100%; height: 85px; overflow:hidden; position:relative; }
+.fling-minislide img{ position:absolute; animation:fling-minislide 40s infinite; opacity:0; width: 100%; height: 85px;}
+}
+
+@media screen and (min-width: 400px) and ( max-width: 499px )
+{
+.fling-minislide {width: 100%; height: 60px; overflow:hidden; position:relative; }
+.fling-minislide img{ position:absolute; animation:fling-minislide 40s infinite; opacity:0; width: 100%; height: 60px;}
+}
+
+@media screen and (min-width: 300px) and ( max-width: 399px )
+{
+.fling-minislide {width: 100%; height: 45px; overflow:hidden; position:relative; }
+.fling-minislide img{ position:absolute; animation:fling-minislide 40s infinite; opacity:0; width: 100%; height: 45px;}
+}
+
+@media screen and (min-width: 200px) and ( max-width: 299px )
+{
+.fling-minislide {width: 100%; height: 30px; overflow:hidden; position:relative; }
+.fling-minislide img{ position:absolute; animation:fling-minislide 40s infinite; opacity:0; width: 100%; height: 30px;}
+}
+
+@media screen and (min-width: 100px) and ( max-width: 199px )
+{
+.fling-minislide {width: 100%; height: 20px; overflow:hidden; position:relative; }
+.fling-minislide img{ position:absolute; animation:fling-minislide 40s infinite; opacity:0; width: 100%; height: 20px;}
+}
+
+</style>
+</head>
+<body>
+
+<div class="fling-minislide">
+  <img src="images/banner01.jpg" alt="Slide 4" />
+  <img src="images/banner02.jpg" alt="Slide 3" />
+  <img src="images/banner03.jpg" alt="Slide 2" />
+  <img src="images/banner04.jpg" alt="Slide 1" />
+</div>
+
+</body>
+</html> 
