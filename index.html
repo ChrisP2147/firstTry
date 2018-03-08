@@ -12,7 +12,7 @@
   </article>
   <p>Erster Absatztext außerhalb des Artikels</p>
   <p>Zweiter Absatztext außerhalb des Artikels</p>
-
+    <h1 id="test"></h1>
   <p id="result"></p>
 
   <script>
@@ -21,7 +21,7 @@
     var text = "Insgesamt sind " + p_elements.length + " p-Elemente im Dokument";
 
     var article_elements = document.getElementById("lead");
-    if(article_elements) {
+    if (article_elements) {
       var art_p_elements = article_elements.getElementsByTagName("p");
       text += " und " + art_p_elements.length + " im article-Element enthalten!";
     }
@@ -32,6 +32,34 @@
     text += " Der zweite Absatz im Artikel lautet: " + art_p_elements[1].innerHTML;
 
     document.getElementById("result").innerHTML = text;
+
+    log = makeLog();
+    logMessage('Hallo Bewohner von Wald und Flur.', log);
+    logMessage('Mein Name ist Hase.', log);
+    logMessage('Ich mag Möhren.', log);  
+    
+    function makeLog(){
+    var holder = document.createElement('div');
+    holder.style.height= '55px';
+    holder.style.width = '300px';
+    holder.style.overflow = 'auto';
+    holder.style.border = '1px solid #666';
+    holder.style.backgroundColor = '#ccc';
+    holder.style.padding ='8px';
+    holder.style.position ='absolute';
+    holder.style.top = '250px';
+    holder.style.left = '100px';
+    document.body.appendChild(holder);
+    return holder;
+    }
+     
+    function logMessage(message, log){
+    var holder = document.createElement('div');
+    holder.textContent = message;
+    log.appendChild(holder);
+    } 
+      
+
   </script>
 
 </body>
